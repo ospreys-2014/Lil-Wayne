@@ -7,21 +7,25 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<nav>
+<header>
+	<div id='cssmenu'>
 		<ul>
-			<li><%= link_to "Home", root_path %></li>
+			<li class='active'><%= link_to "Home", root_path %></li>
 			<% if logged_in? %>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
       <% else %>
           <li><%= link_to "Log in", login_path %></li>
           <li><%= link_to "Sign Up", signup_path %> </li>
       <% end %>
-		</ul>
-	</nav>
+			<li><input type="text" class="form-control" placeholder="Search"></li>	
+	</form>
   <% flash.each do |message_type, message| %>
   	<div class="alert alert-<%= message_type %>"><%= message %></div>
 	<% end %>
+</div>
+</header>
+
+<body>
 <%= yield %>
 
 </body>
