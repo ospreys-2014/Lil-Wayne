@@ -23,13 +23,13 @@ Lil-Wayne
 * Creating a Holodeck (most important) (3)
 * Linking Pages (1)
 
-List
-Basic Entry CRUD (1) Michael Angelo
-Add a comment (1) Michael Angelo
-Login (3) Corey
-Logout (3) Corey
-Sign-up (3) Corey
-Validations (2) Corey
-NavBar (2) Michael Angelo
-Search Bar (3) Baron
-Profile Page (1) Baron
+#####List
+* Basic Entry CRUD (1) Michael Angelo
+* Add a comment (1) Michael Angelo
+* Login (3) Corey
+* Logout (3) Corey
+* Sign-up (3) Corey
+* Validations (2) Corey
+* NavBar (2) Michael Angelo
+* Search Bar (3) Baron
+* Profile Page (1) Baron
