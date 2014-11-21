@@ -4,10 +4,14 @@
 
 	<% @entries.each do |entry| %>
 		<% if entry.title != nil %>
-			<h1><%= entry.title %></h1>
+			<h1><%= link_to "#{entry.title}", entry %></h1>
 			<p><%= entry.content %></p>
 		<% else %>
 			<p><%= entry.content %></p>
 		<% end %>
+		<p><%= link_to "Edit", edit_entry_path(entry) %></p>
+		<p><%= link_to "Delete", entry, method: :delete %></p>
 	<% end %>
+
+	<%= render "new_entry_form"  %>
 </div>
