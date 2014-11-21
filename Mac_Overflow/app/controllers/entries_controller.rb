@@ -1,12 +1,13 @@
 class EntriesController < ApplicationController
 
+	before_action :set_comment, only: [:edit, :show, :destroy]
+
 	def index
 		@entry = Entry.new
 		@entries = Entry.all
 	end
 
 	def show
-		@entry = Entry.find(params[:id])
 	end
 
 	def create
@@ -15,7 +16,6 @@ class EntriesController < ApplicationController
 	end
 
 	def edit
-		@entry = Entry.find(params[:id])
 	end
 
 	def update
@@ -28,8 +28,7 @@ class EntriesController < ApplicationController
 	end
 
 	def destroy
-		@entries = Entry.find(params[:id])
-		@entries.destroy
+		@entry.destroy
 		redirect_to entries_path
 	end
 
@@ -37,6 +36,10 @@ class EntriesController < ApplicationController
 	
 	def entry_params
 		params.require(:entry).permit(:title, :content)
+	end
+
+	def set_comment
+		@entry = Entry.find(params[:id])
 	end
 
 end
