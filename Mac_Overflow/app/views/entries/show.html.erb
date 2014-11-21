@@ -1,4 +1,15 @@
 <div class="container">
 	<h2><%= @entry.title %></h2>
 	<p><%= @entry.content %></p>
+	<h3>Comments</h3>
+	<% @comments.each do |comment|%>
+		Posted By: <p><%= comment.user.name %></p>
+		<p><%= comment.content %></p>
+
+	<% end %>
+	<%= form_for @comment do |f| %>
+		<input type="hidden" name="entry[parent_id]" value="<%= @entry.id%>">
+		<%= f.label "Comment " %><%= f.text_field :content %><br>
+	<%= f.submit %>
+<% end %>
 </div>
