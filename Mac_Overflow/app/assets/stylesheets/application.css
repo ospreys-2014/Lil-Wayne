@@ -27,7 +27,7 @@ body{
   margin: 20px auto;
   width: 400px;
   padding: 0;
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.8);
   border: 2px dotted #fff;
   border-top-left-radius: 2em;
 }
@@ -69,4 +69,8 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+.posted_by {
+  font-size: .75em;
 }
