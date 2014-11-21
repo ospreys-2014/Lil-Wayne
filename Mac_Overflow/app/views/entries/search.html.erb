@@ -4,6 +4,8 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<% @found.each do |entry| %>
-  <%= link_to "#{entry.title}", entry_path(entry) %> <%= entry.content %> <br>
+<% if @found != nil %>
+  <% @found.each do |entry| %>
+    <%= link_to "#{entry.title}", entry_path(entry) %> <%= entry.content %> <br>
+  <% end %>
 <% end %>

@@ -37,7 +37,9 @@ class EntriesController < ApplicationController
 	end
 
 	def search
-		@found = Entry.where(Entry.arel_table[:title].matches("%#{params[:term]}%").or(Entry.arel_table[:content].matches("%#{params[:term]}%"))).order(Entry.arel_table[:updated_at])
+		if params[:term] != nil
+			@found = Entry.where(Entry.arel_table[:title].matches("%#{params[:term]}%").or(Entry.arel_table[:content].matches("%#{params[:term]}%"))).order(Entry.arel_table[:updated_at])
+		end
 	end
 
 	def find
