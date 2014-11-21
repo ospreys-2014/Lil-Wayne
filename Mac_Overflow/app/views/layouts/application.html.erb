@@ -7,6 +7,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+	<div id='cssmenu'>
+		<ul>
+			<li class='active'><a href='#'><span>Home</span></a></li>
+			<li><a href='#'><span>Login</span></a></li>
+			<li><a href='#'><span>Sign-Up</span></a></li>
+			<li><input type="text" class="form-control" placeholder="Search"></li>	
+		</ul>
+	</form>
+</div>
+
+  	
+</header>
+
 <body>
   <% flash.each do |message_type, message| %>
   	<div class="alert alert-<%= message_type %>"><%= message %></div>
