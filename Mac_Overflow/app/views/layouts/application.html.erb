@@ -12,13 +12,15 @@
 		<ul>
 			<li class='active'><%= link_to "Home", root_path %></li>
 			<% if logged_in? %>
-          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <li><%= link_to "Log out", logout_path, id: "logout", method: "delete" %></li>
       <% else %>
-          <li><%= link_to "Log in", login_path %></li>
-          <li><%= link_to "Sign Up", signup_path %> </li>
+          <li><%= link_to "Log in", login_path, id: "login" %></li>
+          <li><%= link_to "Sign Up", signup_path, id: "signup" %> </li>
       <% end %>
-			<li><input type="text" class="form-control" placeholder="Search"></li>	
+			<li><input type="text" class="form-control" placeholder="Search"></li>
 	</form>
+ <%= render "sessions/login_form" %>
+ <%= render partial: "users/signup_form", locals: {user: User.new} %>
   <% flash.each do |message_type, message| %>
   	<div class="alert alert-<%= message_type %>"><%= message %></div>
 	<% end %>
