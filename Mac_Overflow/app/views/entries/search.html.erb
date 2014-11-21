@@ -1,0 +1,9 @@
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:term, "Search for:") %>
+  <%= text_field_tag(:term) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<% @found.each do |entry| %>
+  <%= link_to "#{entry.title}", entry_path(entry) %> <%= entry.content %> <br>
+<% end %>
