@@ -1,4 +1,4 @@
-class EntriesController < ActionController::Base
+class EntriesController < ApplicationController
 
 	def index
 		@entries = Entry.all
