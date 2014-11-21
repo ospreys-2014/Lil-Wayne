@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
 	end
 
 	def create
-		Entry.create(entry_params)
+		current_user.entries << Entry.create(entry_params)
 		redirect_to entries_path
 	end
 

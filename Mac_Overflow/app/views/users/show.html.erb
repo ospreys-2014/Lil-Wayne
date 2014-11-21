@@ -1,1 +1,15 @@
-<%= @user.name %>
+<h1><%= @user.name.capitalize %></h1>
+
+<div id='user_posts'>
+  <h1>Posts</h1>
+  <% @user.entries.where(parent_id: nil).each do |post| %>
+    <%= link_to "#{post.title}", entry_path(post) %>
+  <% end %>
+</div>
+
+<div id='user_comments'>
+  <h1>Comments</h1>
+  <% @user.entries.where.not(parent_id: nil).each do |comment| %>
+    <%= link_to "#{comment.content}", entry_path(comment.parent) %>
+  <% end %>
+</div>
