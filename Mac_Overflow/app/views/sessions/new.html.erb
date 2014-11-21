@@ -4,8 +4,7 @@
 <div class="row">
   <div>
     <%= form_for(:session, url: login_path) do |f| %>
-
-      <%= f.label :name, "Username" %>
+      <%= f.label :name, 'Username' %>
       <%= f.text_field :name, class: 'form-control' %>
       <br>
       <%= f.label :password %>
