@@ -10,32 +10,22 @@
 <header>
 	<div id='cssmenu'>
 		<ul>
-			<li class='active'><a href='#'><span>Home</span></a></li>
-			<li><a href='#'><span>Login</span></a></li>
-			<li><a href='#'><span>Sign-Up</span></a></li>
-			<li><input type="text" class="form-control" placeholder="Search"></li>	
-		</ul>
-	</form>
-</div>
-
-  	
-</header>
-
-<body>
-	<nav>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
+			<li class='active'><%= link_to "Home", root_path %></li>
 			<% if logged_in? %>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
       <% else %>
           <li><%= link_to "Log in", login_path %></li>
           <li><%= link_to "Sign Up", signup_path %> </li>
       <% end %>
-		</ul>
-	</nav>
+			<li><input type="text" class="form-control" placeholder="Search"></li>	
+	</form>
   <% flash.each do |message_type, message| %>
   	<div class="alert alert-<%= message_type %>"><%= message %></div>
 	<% end %>
+</div>
+</header>
+
+<body>
 <%= yield %>
 
 </body>
