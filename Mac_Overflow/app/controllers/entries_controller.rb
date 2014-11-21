@@ -8,6 +8,10 @@ class EntriesController < ApplicationController
 	end
 
 	def show
+		@entry = Entry.find(params[:id])
+		@comment = Entry.new
+		@comments = Entry.where(parent_id: @entry.id)
+		p @comments
 	end
 
 	def create
@@ -35,7 +39,7 @@ class EntriesController < ApplicationController
 	private
 
 	def entry_params
-		params.require(:entry).permit(:title, :content)
+		params.require(:entry).permit(:title, :content, :parent_id)
 	end
 
 	def set_comment
