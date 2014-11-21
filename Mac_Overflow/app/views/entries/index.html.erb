@@ -9,9 +9,12 @@
 		<% else %>
 			<p><%= entry.content %></p>
 		<% end %>
-		<p><%= link_to "Edit", edit_entry_path(entry) %></p>
-		<p><%= link_to "Delete", entry, method: :delete %></p>
+		<% if session[:user_id] == entry.user_id %>
+			<p><%= link_to "Edit", edit_entry_path(entry) %></p>
+			<p><%= link_to "Delete", entry, method: :delete %></p>
+		<% end %>
 	<% end %>
-
-	<%= render "new_entry_form"  %>
+	<% if current_user %>
+		<%= render "new_entry_form"  %>
+	<% end %>
 </div>
