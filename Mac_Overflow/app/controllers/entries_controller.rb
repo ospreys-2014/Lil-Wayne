@@ -14,6 +14,19 @@ class EntriesController < ApplicationController
 		redirect_to entries_path
 	end
 
+	def edit
+		@entry = Entry.find(params[:id])
+	end
+
+	def update
+		entry = Entry.find(params[:id])
+		if entry.update_attributes entry_params
+			redirect_to entries_path
+		else
+			redirect_to :back
+		end
+	end
+
 	private
 	
 	def entry_params
