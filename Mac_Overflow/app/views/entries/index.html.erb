@@ -1,0 +1,10 @@
+<div class="container">
+	<% @entries.each do |entry| %>
+		<% if entry.title != nil %>
+			<h1><%= entry.title %></h1>
+			<p><%= entry.content %></p>
+		<% else %>
+			<p><%= entry.content %></p>
+		<% end %>
+	<% end %>
+</div>
