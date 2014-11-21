@@ -36,6 +36,13 @@ class EntriesController < ApplicationController
 		redirect_to entries_path
 	end
 
+	def search
+		@found = Entry.where(Entry.arel_table[:title].matches("%#{params[:term]}%").or(Entry.arel_table[:content].matches("%#{params[:term]}%"))).order(Entry.arel_table[:updated_at])
+	end
+
+	def find
+	end
+
 	private
 
 	def entry_params
