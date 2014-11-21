@@ -29,6 +29,7 @@ body{
   padding: 0;
   background:rgba(0,0,0,0.5);
   border: 2px dotted #fff;
+  border-top-left-radius: 2em;
 }
 
 a {
@@ -37,7 +38,8 @@ a {
 
 h2{
 	text-align: center;
-	background-color: #333300;
+	background-color: #7FDDDB;
+  text-shadow: 2px 2px #000000;
 	color: white;
 }
 
