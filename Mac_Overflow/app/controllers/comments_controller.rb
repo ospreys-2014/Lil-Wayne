@@ -1,4 +1,4 @@
-class EntriesController < ApplicationController
+class CommentsController < ApplicationController
 
 	before_action :set_comment, only: [:edit, :show, :destroy]
 
@@ -14,7 +14,7 @@ class EntriesController < ApplicationController
 	end
 
 	def create
-		current_user.entries << Entry.create(entry_params)
+		current_user.comments << Comment.create(comment_params)
 		redirect_to entries_path
 	end
 
@@ -46,8 +46,8 @@ class EntriesController < ApplicationController
 
 	private
 
-	def entry_params
-		params.require(:entry).permit(:title, :content, :parent_id)
+	def comment_params
+		params.require(:comment).permit(:description, :entry_id)
 	end
 
 	def set_comment
