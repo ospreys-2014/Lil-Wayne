@@ -1,16 +1,11 @@
 <div class="container">
-<p>Ask a question!</p>
-
-
 	<% @entries.each do |entry| %>
-			<h1><%= link_to "#{entry.title}", entry %></h1>
-			<p><%= entry.content %></p>
-		<% if (session[:user_id] == entry.user_id) && entry.title != nil%>
-			<%= link_to "Edit", edit_entry_path(entry) %>
-			<%= link_to "Delete", entry, method: :delete %>
-		<% end %>
+		<h1><%= link_to "#{entry.title}", entry %></h1>
+		<p><%= entry.content %></p>
+		<%= render partial: "entries/edit_form", locals: {entry: entry}  %>
 	<% end %>
 	<% if current_user %>
 		<%= render "new_entry_form"  %>
 	<% end %>
 </div>
+
