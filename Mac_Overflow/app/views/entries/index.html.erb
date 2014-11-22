@@ -2,7 +2,10 @@
 	<% @entries.each do |entry| %>
 		<h1><%= link_to "#{entry.title}", entry %></h1>
 		<p><%= entry.content %></p>
-		<%= render partial: "entries/edit_form", locals: {entry: entry}  %>
+		<p class="posted_by">Posted By: <i><%= entry.user.name %></i></p>
+			<% if current_user == entry.user %>
+				<%= render partial: "entries/edit_form", locals: {entry: entry}  %>
+			<% end %>
 	<% end %>
 	<% if current_user %>
 		<%= render "new_entry_form"  %>
