@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
    has_many :entries
    has_many :comments
 
-   validates :name, presence: true, length: { minimum: 2, maximum: 50 }
+   validates :name, presence: true, length: { minimum: 2, maximum: 50 }, uniqueness: true
    validates :password, length: { minimum: 3 }
 
 end
