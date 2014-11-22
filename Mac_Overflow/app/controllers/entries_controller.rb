@@ -13,6 +13,10 @@ class EntriesController < ApplicationController
 		@comments = @entry.comments
 	end
 
+	def new
+		
+	end
+
 	def create
 		current_user.entries << Entry.create(entry_params)
 		redirect_to entries_path
