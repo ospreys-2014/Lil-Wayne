@@ -4,13 +4,13 @@
 	<h3>Comments</h3>
 	<% @comments.each do |comment|%>
 		<p class="posted_by">Posted By: <i><%= comment.user.name %></i></p>
-		<p><%= comment.content %></p>
-
+		<p><%= comment.description %></p>
 	<% end %>
+
 	<% if current_user %>
 		<%= form_for @comment do |f| %>
-			<input type="hidden" name="entry[parent_id]" value="<%= @entry.id%>">
-			<%= f.label "Comment " %><%= f.text_field :content %><br>
+			<input type="hidden" name="comment[entry_id]" value="<%= @entry.id%>">
+			<%= f.label "Comment " %><%= f.text_field :description %><br>
 		<%= f.submit %>
 	<% end %>
 <% end  %>
