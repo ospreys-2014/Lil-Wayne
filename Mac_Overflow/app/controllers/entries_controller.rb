@@ -47,7 +47,7 @@ class EntriesController < ApplicationController
 	private
 
 	def entry_params
-		params.require(:entry).permit(:title, :content, :parent_id)
+		params.require(:entry).permit(:title, :content)
 	end
 
 	def set_comment
