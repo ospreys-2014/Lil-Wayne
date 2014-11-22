@@ -27,8 +27,23 @@ describe EntriesController, type: :controller do
       get :show, id: @entry
       expect(response).to be_successful
     end
+
+    it "renders template" do
+      get :show, id: @entry
+      expect(response).to render_template :show
+    end
   end
 
+  # describe "Post#create" do
+  #   context 'valid attributes' do
+  #     it "creates new entry" do
+  #       expect{
+  #         post :create,
+  #         entry: attributes_for(:entry)
+  #       }.to change(Entry, :count).by(1)
+  #     end
+  #   end
+  # end
 
   describe 'Put#update' do
     before :each do
@@ -40,14 +55,6 @@ describe EntriesController, type: :controller do
         put :update, id: @entry, entry: attributes_for(:entry, title: "hello")
         @entry.reload
         expect(@entry.title).to eq("hello")
-      end
-    end
-
-    context 'with invalid attributes' do
-      it "does not update attributes" do
-        put :update, id: @entry, entry: attributes_for(:entry, title: nil)
-        @entry.reload
-        expect(@entry.title).to_not eq(nil)
       end
     end
 
