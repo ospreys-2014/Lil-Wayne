@@ -29,14 +29,29 @@ describe EntriesController, type: :controller do
     end
   end
 
-  # context '#create' do
-  #   it 'with valid attributes' do
-  #     expect {
-  #       post :create#, entry: attributes_for(:entry)
-  #       expect(response).to be_redirect
-  #     }.to change { Entry.count }.by(1)
-  #   end
 
-  # end
+  describe 'Put#update' do
+    before :each do
+      @entry = create(:entry, title: "sadgaweg", content: "asdfasdga")
+    end
+
+    context 'with valid attributes' do
+      it 'updates the attributes' do
+        put :update, id: @entry, entry: attributes_for(:entry, title: "hello")
+        @entry.reload
+        expect(@entry.title).to eq("hello")
+      end
+    end
+
+    context 'with invalid attributes' do
+      it "does not update attributes" do
+        put :update, id: @entry, entry: attributes_for(:entry, title: nil)
+        @entry.reload
+        expect(@entry.title).to_not eq(nil)
+      end
+    end
+
+  end
 
 end
+
