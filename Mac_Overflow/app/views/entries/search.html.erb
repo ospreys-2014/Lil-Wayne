@@ -1,8 +1,4 @@
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:term, "Search for:") %>
-  <%= text_field_tag(:term) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<%= render "search_form" %>
 
 <% if @found != nil %>
   <% @found.each do |entry| %>
