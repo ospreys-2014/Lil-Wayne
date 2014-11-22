@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/ospreys-2014/Lil-Wayne.png?style=badge)](https://circleci.com/gh/ospreys-2014/Lil-Wayne)
+
 Lil-Wayne
 =========
 
