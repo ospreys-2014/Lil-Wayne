@@ -14,8 +14,9 @@ class CommentsController < ApplicationController
 	end
 
 	def create
+		@entry = Entry.find(comment_params[:entry_id])
 		current_user.comments << Comment.create(comment_params)
-		redirect_to entries_path
+		redirect_to entry_path(@entry)
 	end
 
 	def edit
