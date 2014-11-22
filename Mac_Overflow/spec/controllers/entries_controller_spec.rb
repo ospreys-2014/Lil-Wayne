@@ -27,16 +27,38 @@ describe EntriesController, type: :controller do
       get :show, id: @entry
       expect(response).to be_successful
     end
+
+    it "renders template" do
+      get :show, id: @entry
+      expect(response).to render_template :show
+    end
   end
 
-  # context '#create' do
-  #   it 'with valid attributes' do
-  #     expect {
-  #       post :create#, entry: attributes_for(:entry)
-  #       expect(response).to be_redirect
-  #     }.to change { Entry.count }.by(1)
+  # describe "Post#create" do
+  #   context 'valid attributes' do
+  #     it "creates new entry" do
+  #       expect{
+  #         post :create,
+  #         entry: attributes_for(:entry)
+  #       }.to change(Entry, :count).by(1)
+  #     end
   #   end
-
   # end
 
+  describe 'Put#update' do
+    before :each do
+      @entry = create(:entry, title: "sadgaweg", content: "asdfasdga")
+    end
+
+    context 'with valid attributes' do
+      it 'updates the attributes' do
+        put :update, id: @entry, entry: attributes_for(:entry, title: "hello")
+        @entry.reload
+        expect(@entry.title).to eq("hello")
+      end
+    end
+
+  end
+
 end
+

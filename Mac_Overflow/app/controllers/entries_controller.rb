@@ -14,11 +14,11 @@ class EntriesController < ApplicationController
 	end
 
 	def new
-		
+
 	end
 
 	def create
-		current_user.entries << Entry.create(entry_params)
+		Entry.create(title: entry_params[:title], content: entry_params[:content], user_id: current_user.id)
 		redirect_to entries_path
 	end
 
@@ -51,7 +51,7 @@ class EntriesController < ApplicationController
 	private
 
 	def entry_params
-		params.require(:entry).permit(:title, :content)
+		params.require(:entry).permit(:title, :content, :user_id)
 	end
 
 	def set_comment
