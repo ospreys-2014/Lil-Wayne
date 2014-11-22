@@ -1,10 +1,7 @@
 <div class="container">
-<p>Ask a question!</p>
-
-
 	<% @entries.each do |entry| %>
-			<h1><%= link_to "#{entry.title}", entry %></h1>
-			<p><%= entry.content %></p>
+		<h1><%= link_to "#{entry.title}", entry %></h1>
+		<p><%= entry.content %></p>
 		<%= render partial: "entries/edit_form", locals: {entry: entry}  %>
 	<% end %>
 	<% if current_user %>

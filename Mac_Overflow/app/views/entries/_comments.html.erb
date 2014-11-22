@@ -1,0 +1,5 @@
+<%= form_for @comment do |f| %>
+	<input type="hidden" name="comment[entry_id]" value="<%= @entry.id%>">
+	<%= f.label "Comment " %><%= f.text_field :description %><br>
+	<%= f.submit %>
+<% end %>
