@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 group :development,:test do
  gem "rspec-rails", "~> 3.1.0"
+ gem 'rspec_junit_formatter'
  gem "factory_girl_rails", "~> 4.4.1"
 end
 
