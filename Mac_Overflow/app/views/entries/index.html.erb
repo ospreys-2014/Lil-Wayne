@@ -15,13 +15,9 @@
 <div class="popup">
 	<h2>Comment!</h2>
 	<div>
-		<label for="comment">Comment</label>
-		<input type="text" id="Comment" value="" />
+    <textarea id='comments' placeholder='comment'></textarea>
 	</div>
-	<div>
-		<label for="password">Password</label>
-		<input type="password" id="password" value="" />
-	</div>
+
 	<input type="button" value="Submit comment" />
 
 	<a class="close" href="#close"></a>
@@ -29,7 +25,7 @@
 
 
 <div class="container">
-	
+
 	<% @entries.each do |entry| %>
 		<h1><%= link_to "#{entry.title}", entry %></h1>
 		<p><%= entry.content %></p>
