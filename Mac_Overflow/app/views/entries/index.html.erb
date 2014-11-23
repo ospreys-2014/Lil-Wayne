@@ -1,4 +1,35 @@
+	<ul>
+      <li><a href="#" class="genre">dubstep</a></li>
+      <li><a href="#" class="genre">electromic</a></li>
+      <li><a href="#" class="genre">punk</a></li>
+      <li><a href="#" class="genre">opera</a></li>
+  </ul>
+  <div id="target"></div>
+
+  		<a href="#login_form" id="login_pop">Comment</a>
+
+
+
+<a href="#x" class="overlay" id="login_form"></a>
+<!-- modal code from  http://www.script-tutorials.com/demos/222/index.html#login_form -->
+<div class="popup">
+	<h2>Comment!</h2>
+	<div>
+		<label for="comment">Comment</label>
+		<input type="text" id="Comment" value="" />
+	</div>
+	<div>
+		<label for="password">Password</label>
+		<input type="password" id="password" value="" />
+	</div>
+	<input type="button" value="Submit comment" />
+
+	<a class="close" href="#close"></a>
+</div>
+
+
 <div class="container">
+	
 	<% @entries.each do |entry| %>
 		<h1><%= link_to "#{entry.title}", entry %></h1>
 		<p><%= entry.content %></p>
