@@ -25,4 +25,34 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('#signup-form').toggle(	)
 	} )
+
+	function playSomeSound(genre) {
+	SC.get('/tracks', {
+		genres: genre,
+		bpm: {
+			from: 100
+		}
+
+	}, function(tracks){
+		var random = Math.floor(Math.random() * 49);
+		SC.oEmbed(tracks[random].uri, { auto_play: true }, document.getElementById('target'));
+	});
+}
+
+window.onload = function() {
+	SC.initialize({
+		client_id: '22e9a7ddce77425a1febb432189e7232'
+	});
+	var menuLinks = $('.genre');
+	for (var i = 0; i < menuLinks.length; i++) {
+		var menuLink = menuLinks[i];
+		menuLink.onclick = function(e) {
+			e.preventDefault();
+			console.log("hello")
+			playSomeSound(menuLink.innerHTML);
+		};
+	}
+};
+
+
 });
