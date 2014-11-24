@@ -16,8 +16,7 @@
 
 body{
   font-family: 'Share Tech', sans-serif;
-	background-image: url('water.jpg');
-  background-repeat: no-repeat;
+	background: #DFDEDD;
   color: #fff;
 }
 
@@ -70,4 +69,9 @@ input {
 
 .posted_by {
   font-size: .75em;
+}
+
+#target{
+  margin: auto;
+  width: 50em;
 }
