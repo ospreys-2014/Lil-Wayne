@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, :entries, :comments
+  resources :users, :entries
 
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'

@@ -16,7 +16,7 @@
 
 body{
   font-family: 'Share Tech', sans-serif;
-	background: #DFDEDD;
+	background: url('rise.jpeg') no-repeat center center fixed;
   color: #fff;
 }
 
@@ -41,7 +41,7 @@ h2{
   font-size: 4em;
 	text-align: center;
 	background-color: #000;
-  text-shadow: 1px 1px #fff;
+  text-shadow: .5px .5px #fff;
 	color: #FD0450;
 }
 
@@ -79,3 +79,10 @@ input {
   width: 50em;
 }
 
+#modal_button{
+  background-color: #000;
+  font-size: 1em;
+  width: 10%;
+  height: 10%;
+  color: white;
+}

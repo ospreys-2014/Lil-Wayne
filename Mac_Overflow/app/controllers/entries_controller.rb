@@ -12,19 +12,10 @@ class EntriesController < ApplicationController
 	end
 
 	def new
-
 	end
 
 	def create
 		 entry = Entry.create(entry_params)
-		# p "*" * 50
-		#  p session[:user_id]
-		#  entry.user = session[:user_id]
-		#  p entry.user
-
-		# @user = User.find(session[:user_id])
-		# @entry = @user.entries.build(entry_params)
-		# p @entry
 		p session[:user_id]
 		redirect_to entries_path
 	end
