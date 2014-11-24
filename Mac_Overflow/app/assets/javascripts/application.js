@@ -48,7 +48,6 @@ window.onload = function() {
 		var menuLink = menuLinks[i];
 		menuLink.onclick = function(e) {
 			e.preventDefault();
-			console.log("hello")
 			playSomeSound(menuLink.innerHTML);
 		};
 	}
