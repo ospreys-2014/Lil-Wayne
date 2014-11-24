@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'simplecov'
+SimpleCov.start
 
 describe EntriesController, type: :controller do
   context '#index' do
