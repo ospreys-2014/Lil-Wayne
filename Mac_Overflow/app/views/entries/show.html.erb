@@ -1,12 +1,5 @@
 <div class="container">
 	<h2><%= @entry.title %></h2>
+	<p><%= @entry.genre %></p>
 	<p><%= @entry.content %></p>
-	<h3>Comments</h3>
-	<% @comments.each do |comment|%>
-		<p class="posted_by">Posted By: <i><%= comment.user.name %></i></p>
-		<p><%= comment.description %></p>
-	<% end %>
-	<% if current_user %>
-		<%= render "comments" %>
-	<% end %>
 </div>
