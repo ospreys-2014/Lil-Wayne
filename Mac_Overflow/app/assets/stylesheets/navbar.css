@@ -38,8 +38,9 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 14px;
-  position: relative;
+  font-size: 30px;
+  position: relative; 
+  list-style: none;
   -webkit-transition: color .25s;
   -moz-transition: color .25s;
   -ms-transition: color .25s;
@@ -53,7 +54,6 @@
   width: 100%;
 }
 #cssmenu ul li a:after {
-  content: "";
   display: block;
   position: absolute;
   right: -3px;

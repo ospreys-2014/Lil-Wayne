@@ -73,5 +73,7 @@ input {
 
 #target{
   margin: auto;
+  padding-top: 20px;
   width: 50em;
 }
+
