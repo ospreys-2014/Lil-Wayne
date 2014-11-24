@@ -16,7 +16,7 @@
 
 body{
   font-family: 'Share Tech', sans-serif;
-	background: #DFDEDD;
+	background: #6E6E6E;
   color: #fff;
 }
 
@@ -79,3 +79,9 @@ input {
   width: 50em;
 }
 
+#modal_button{
+  background-color: #000;
+  font-size: 1em;
+  width: 10%;
+  height: 10%;
+}
