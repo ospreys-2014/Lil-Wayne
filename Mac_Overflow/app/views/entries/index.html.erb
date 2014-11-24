@@ -1,33 +1,34 @@
   <div id="target"></div>
-	<ul id="albums">
-      <li id="alternative"><a href="#" class="genre">alternative</a></li>
-      <li id="classical"><a href="#" class="genre">classical</a></li>
-      <li id="country"><a href="#" class="genre">country</a></li>
-      <li id="dance"><a href="#" class="genre">dance</a></li>
-      <li id="latin"><a href="#" class="genre">latin</a></li>
-      <li id="metal"><a href="#" class="genre">metal</a></li>
-      <li id="pop"><a href="#" class="genre">pop</a></li>
-      <li id="rap"><a href="#" class="genre">rap</a></li>
+  <ul id="albums">
+  	<li id="alternative"><a href="#" class="genre">alternative</a></li>
+  	<li id="classical"><a href="#" class="genre">classical</a></li>
+  	<li id="country"><a href="#" class="genre">country</a></li>
+  	<li id="dance"><a href="#" class="genre">dance</a></li>
+  	<li id="latin"><a href="#" class="genre">latin</a></li>
+  	<li id="metal"><a href="#" class="genre">metal</a></li>
+  	<li id="pop"><a href="#" class="genre">pop</a></li>
+  	<li id="rap"><a href="#" class="genre">rap</a></li>
   </ul>
 
-  		<a href="#login_form" id="login_pop">Create note</a>
+  <a href="#login_form" id="login_pop">Create note</a>
 
 
 
-<a href="#x" class="overlay" id="login_form"></a>
-<!-- modal code from  http://www.script-tutorials.com/demos/222/index.html#login_form -->
-<div class="popup">
+  <a href="#x" class="overlay" id="login_form"></a>
+  <!-- modal code from  http://www.script-tutorials.com/demos/222/index.html#login_form -->
+  <div class="popup">
 
-	<h2 id="popup_title"></h2>
-	<h4 id="popup_genre"></h4>
-	<div>
-		<form id="create_note">
-			<input id="entry_title" type="hidden" name="entry[title]" value="" />
-			<input id="entry_genre" type ="hidden" name="entry[genre]" value="" />
-			<textarea id="entry_content" name="entry[content]"></textarea>
-			<input type="submit" value="Submit note." />
-		</form>
-	</div>
+  	<h2 id="popup_title"></h2>
+  	<h4 id="popup_genre"></h4>
+  	<div>
+  		<form id="create_note">
+  			<input id="entry_user" type="hidden" name="entry[user_id]" value="<%= session[:user_id] %>" />
+  			<input id="entry_title" type="hidden" name="entry[title]" value="" />
+  			<input id="entry_genre" type ="hidden" name="entry[genre]" value="" />
+  			<textarea id="entry_content" name="entry[content]"></textarea>
+  			<input type="submit" value="Submit note." />
+  		</form>
+  	</div>
 
-	<a class="close" href="#close"></a>
-</div>
+  	<a class="close" href="#close"></a>
+  </div>
