@@ -18,9 +18,15 @@ class EntriesController < ApplicationController
 	end
 
 	def create
+		# entry = Entry.create(entry_params)
 		p "*" * 50
-		p entry_params
-		Entry.create(entry_params)
+		# p session[:user_id]
+		# entry.user = session[:user_id]
+		# p entry.user
+
+		@user = User.find(session[:user_id])
+		@entry = @user.entries.build(entry_params)
+		p @entry
 		redirect_to entries_path
 	end
 
@@ -53,7 +59,7 @@ class EntriesController < ApplicationController
 	private
 
 	def entry_params
-		params.require(:entry).permit(:title, :content, :genre) #Add current user in via helper method
+		params.require(:entry).permit(:title, :content, :genre) #need to add current user
 	end
 
 	def set_comment

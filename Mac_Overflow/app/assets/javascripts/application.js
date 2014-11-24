@@ -54,7 +54,6 @@ $(document).ready(function() {
 
 		$('.genre').click(function(event){
 			playSomeSound($(event.target).text());
-		console.log($(event.target).text());
 		});
 
 		// var menuLinks = $('.genre');
@@ -75,14 +74,13 @@ $(document).ready(function() {
 		$target = $(event.target);
 		console.log($target.serialize())
 		$.ajax({
-			url: '/entries	',
+			url: '/entries',
 			type: 'POST',
-			dataType: 'json',
-			data: $('this').serialize()
+			data: $(this).serialize()
 		})
 		.done(function() {
-			debugger
 			console.log("success");
+			$('.popup').toggle()
 		})
 		.fail(function() {
 			console.log("error");
