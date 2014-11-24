@@ -1,10 +1,14 @@
-	<ul>
-      <li><a href="#" class="genre">dubstep</a></li>
-      <li><a href="#" class="genre">electromic</a></li>
-      <li><a href="#" class="genre">punk</a></li>
-      <li><a href="#" class="genre">opera</a></li>
-  </ul>
   <div id="target"></div>
+	<ul id="albums">
+      <li id="alternative"><a href="#" class="genre">alternative</a></li>
+      <li id="classical"><a href="#" class="genre">classical</a></li>
+      <li id="country"><a href="#" class="genre">country</a></li>
+      <li id="dance"><a href="#" class="genre">dance</a></li>
+      <li id="latin"><a href="#" class="genre">latin</a></li>
+      <li id="metal"><a href="#" class="genre">metal</a></li>
+      <li id="pop"><a href="#" class="genre">pop</a></li>
+      <li id="rap"><a href="#" class="genre">rap</a></li>
+  </ul>
 
   		<a href="#login_form" id="login_pop">Create note</a>
 
@@ -33,20 +37,3 @@
 
 	<a class="close" href="#close"></a>
 </div>
-
-
-<div class="container">
-
-	<% @entries.each do |entry| %>
-		<h1><%= link_to "#{entry.title}", entry %></h1>
-		<p><%= entry.content %></p>
-		<p class="posted_by">Posted By: <i><%= entry.user.name %></i></p>
-			<% if current_user == entry.user %>
-				<%= render partial: "entries/edit_form", locals: {entry: entry}  %>
-			<% end %>
-	<% end %>
-	<% if current_user %>
-		<%= render "new_entry_form"  %>
-	<% end %>
-</div>
-

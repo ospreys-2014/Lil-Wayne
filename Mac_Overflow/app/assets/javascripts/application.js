@@ -52,7 +52,7 @@ $(document).ready(function() {
 			client_id: '22e9a7ddce77425a1febb432189e7232'
 		});
 
-		$(document).click(function(event){
+		$('.genre').click(function(event){
 			playSomeSound($(event.target).text());
 		console.log($(event.target).text());
 		});
