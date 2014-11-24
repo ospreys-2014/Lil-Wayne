@@ -6,19 +6,30 @@
   </ul>
   <div id="target"></div>
 
-  		<a href="#login_form" id="login_pop">Comment</a>
+  		<a href="#login_form" id="login_pop">Create note</a>
 
 
 
 <a href="#x" class="overlay" id="login_form"></a>
 <!-- modal code from  http://www.script-tutorials.com/demos/222/index.html#login_form -->
 <div class="popup">
-	<h2>Comment!</h2>
-	<div>
-    <textarea id='comments' placeholder='comment'></textarea>
-	</div>
 
-	<input type="button" value="Submit comment" />
+	<h2 id="popup_title"></h2> 
+	<h4 id="popup_genre"></h4> 
+<!-- 	<div>
+		<label for="comment">Comment</label>
+		<input type="text" id="Comment" value="" />
+	</div> -->
+	<div>
+<!-- 		<label for="password">Password</label> -->
+		<form id="create_note">
+			<input id="entry_title" type="hidden" name="entry[title]" value="" />
+			<input id="entry_genre" type ="hidden" name="entry[genre]" value="" />
+			<textarea id="entry_content" name="entry[content]"></textarea>
+			<!-- <input id="entry_content" name="entry[content]" value="" /> -->
+			<input type="submit" value="Submit note." />
+		</form>
+	</div>
 
 	<a class="close" href="#close"></a>
 </div>
