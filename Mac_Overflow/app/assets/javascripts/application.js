@@ -40,22 +40,31 @@ $(document).ready(function() {
 			currentTrack.title = nextTrack.title
 			currentTrack.genre = nextTrack.genre
 			popupHandler(currentTrack.title, currentTrack.genre)
-			console.log(currentTrack);
 		});
 	}
-	
+
+	$(document).click(function(event){
+		console.log($(event.target).text());
+	});
+
 	window.onload = function() {
 		SC.initialize({
 			client_id: '22e9a7ddce77425a1febb432189e7232'
 		});
-		var menuLinks = $('.genre');
-		for (var i = 0; i < menuLinks.length; i++) {
-			var menuLink = menuLinks[i];
-			menuLink.onclick = function(e) {
-				e.preventDefault();
-				playSomeSound(menuLink.innerHTML);
-			};
-		}
+
+		$(document).click(function(event){
+			playSomeSound($(event.target).text());
+		console.log($(event.target).text());
+		});
+
+		// var menuLinks = $('.genre');
+		// for (var i = 0; i < menuLinks.length; i++) {
+		// 	var menuLink = menuLinks[i];
+		// 	menuLink.onclick = function(e) {
+		// 		e.preventDefault();
+		// 		playSomeSound(menuLink.innerHTML);
+		// 	};
+		// }
 	};
 
 	$('.teaser__trackTitle sc-truncate sc-orange sc-font-light').innerHTML
