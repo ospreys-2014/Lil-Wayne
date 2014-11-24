@@ -55,15 +55,6 @@ $(document).ready(function() {
 		$('.genre').click(function(event){
 			playSomeSound($(event.target).text());
 		});
-
-		// var menuLinks = $('.genre');
-		// for (var i = 0; i < menuLinks.length; i++) {
-		// 	var menuLink = menuLinks[i];
-		// 	menuLink.onclick = function(e) {
-		// 		e.preventDefault();
-		// 		playSomeSound(menuLink.innerHTML);
-		// 	};
-		// }
 	};
 
 	$('.teaser__trackTitle sc-truncate sc-orange sc-font-light').innerHTML
