@@ -60,6 +60,7 @@ $(document).ready(function() {
 
 	$('.teaser__trackTitle sc-truncate sc-orange sc-font-light').innerHTML
 
+
 	$('#create_note').on('submit', function(event){
 		event.preventDefault();
 		$target = $(event.target);
