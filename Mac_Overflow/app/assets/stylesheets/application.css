@@ -32,14 +32,17 @@ body{
 }
 
 a {
-  color: #CAF9F8;
+  color: #FD0450;
+  text-shadow: 1px 1px #fff;
+  text-decoration: none;
 }
 
 h2{
+  font-size: 4em;
 	text-align: center;
-	background-color: #7FDDDB;
-  text-shadow: 2px 2px #000000;
-	color: white;
+	background-color: #000;
+  text-shadow: 1px 1px #fff;
+	color: #FD0450;
 }
 
 /* forms */
