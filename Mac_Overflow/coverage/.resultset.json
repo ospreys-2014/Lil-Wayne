@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/MichaelAngelo/Desktop/woah/Lil-Wayne/Mac_Overflow/app/controllers/entries_controller.rb": [
+      "/Users/sgharms/ospreys-overflow-review/Lil-Wayne/Mac_Overflow/app/controllers/entries_controller.rb": [
         1,
         null,
         1,
@@ -62,13 +62,13 @@
         null,
         null
       ],
-      "/Users/MichaelAngelo/Desktop/woah/Lil-Wayne/Mac_Overflow/app/controllers/application_controller.rb": [
+      "/Users/sgharms/ospreys-overflow-review/Lil-Wayne/Mac_Overflow/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/MichaelAngelo/Desktop/woah/Lil-Wayne/Mac_Overflow/spec/features/auth_spec.rb": [
+      "/Users/sgharms/ospreys-overflow-review/Lil-Wayne/Mac_Overflow/spec/features/auth_spec.rb": [
         1,
         null,
         null,
@@ -138,12 +138,12 @@
         null,
         null
       ],
-      "/Users/MichaelAngelo/Desktop/woah/Lil-Wayne/Mac_Overflow/app/models/entry.rb": [
+      "/Users/sgharms/ospreys-overflow-review/Lil-Wayne/Mac_Overflow/app/models/entry.rb": [
         1,
         1,
         null
       ],
-      "/Users/MichaelAngelo/Desktop/woah/Lil-Wayne/Mac_Overflow/app/models/user.rb": [
+      "/Users/sgharms/ospreys-overflow-review/Lil-Wayne/Mac_Overflow/app/models/user.rb": [
         1,
         1,
         1,
@@ -153,6 +153,6 @@
         null
       ]
     },
-    "timestamp": 1416814163
+    "timestamp": 1417016179
   }
 }

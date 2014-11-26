@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
 
+  # I very much like that you have this CRUD philosophy of a session, that's a
+  # great way to see the universe.
+  #
 	def new
   end
 

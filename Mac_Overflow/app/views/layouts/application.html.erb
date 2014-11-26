@@ -8,6 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<!-- your header should be a part of the <body> .  This is invalid HTML. -->
 <header>
   <div id='cssmenu'>
 		<form>
@@ -24,7 +25,12 @@
 		</ul>
 	</form>
  <%= render "sessions/login_form" %>
+
+ <%# This User.new, because it's defined in application.html.erb, is executed on _every single page of your app_.  That's weird %>
+ <%# Why isn't the one particular route that actually uses a new User defining @user = User.new in the controller?%>
+
  <%= render partial: "users/signup_form", locals: {user: User.new} %>
+ <%# might be nice as a partial..?%>
   <% flash.each do |message_type, message| %>
   	<div class="alert alert-<%= message_type %>"><%= message %></div>
 	<% end %>
