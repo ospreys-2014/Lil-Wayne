@@ -1,22 +1,32 @@
 [![Circle CI](https://circleci.com/gh/ospreys-2014/Lil-Wayne.png?style=badge)](https://circleci.com/gh/ospreys-2014/Lil-Wayne)
 
 #Song Explorer
-####A story of Redirection
-=========
+application used to bring random music to users based on genres
 
-#####MVP 
-* Basic Entry CRUD (1)
-* Add a modal entry (3)
-* Login (3)
-* Logout (3)
-* Sign-up (3)
-* Validations (2)
-* NavBar (2)
-* Search Bar (3)
-* Profile Page (1)
-* SoundCloud API (3)
 
-#####NOT MVP
-* Ratings (3)
-* User Auth for Entries (3)
-* Linking Pages (1)
+
+Explore here: [Song Explorer](http://song-explorer.herokuapp.com/)
+
+####Built with:
+SoundCloud API, JavaScript, AJAX, jQuery, Rails
+
+
+
+
+
+##Team Members
+
+####Michael Angelo
+* GitHub: https://github.com/Yamikamisama
+* LinkedIn: http://www.linkedin.com/pub/michael-angelo/9a/a93/1b0/
+* Email: yamikamisama@gmail.com
+
+####Baron Willeford
+* GitHub: https://github.com/baron816
+* LinkedIn: https://www.linkedin.com/pub/baron-willeford/34/504/4b4
+* Email: baron.willeford@gmail.com
+
+####Corey Nilan
+* GitHub: https://github.com/cen10
+* LinkedIn: https://www.linkedin.com/pub/courtney-nilan/8/160/902
+* Email: cnilan@gmail.com
