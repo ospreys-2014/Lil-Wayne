@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/ospreys-2014/Lil-Wayne.png?style=badge)](https://circleci.com/gh/ospreys-2014/Song-Explorer)
+[![Circle CI](https://circleci.com/gh/ospreys-2014/Song-Explorer.svg?style=svg)](https://circleci.com/gh/ospreys-2014/Song-Explorer)
 
 #Song Explorer
 application used to bring random music to users based on genres
