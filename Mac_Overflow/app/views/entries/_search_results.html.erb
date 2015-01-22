@@ -1,3 +1,4 @@
 <% @found.each do |entry| %>
+  <%# why enclose this in "" if you just want the string value %>
   <%= link_to "#{entry.title}", entry_path(entry) %> <%= entry.content %> <br>
 <% end %>

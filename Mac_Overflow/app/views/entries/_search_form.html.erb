@@ -1,3 +1,4 @@
+<%# why aren't we using a named route here?  e.g. search_path.  BUT: good understanding that you need a form_tag here vs. a form_for%>
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:term, "Search for:") %>
   <%= text_field_tag(:term) %>

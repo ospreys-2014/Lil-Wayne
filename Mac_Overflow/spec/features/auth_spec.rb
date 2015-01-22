@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+# Generally I don't recommend you comment-out code and commit it and merge it
+# to master.  You should either be committed (it works!) or remove it.
+#
 # feature 'User Management' do
 #   scenario 'New user sign up' do
 #     visit root_path
@@ -56,6 +59,7 @@ feature 'Logging in' do
     end
   end
 
+# Ditto
 # feature 'Logging out' do
 
 # 	describe "log out" do

@@ -15,6 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
+/*
+ *
+ * application.js is meant to be a manifest, it includes other files of JS, but
+ * does not contain JS itself.
+ *
+ */
+
 $(document).ready(function() {
 	$(document).on('click', '#login', function(event){
 		event.preventDefault();
@@ -26,29 +33,52 @@ $(document).ready(function() {
 		$('#signup-form').toggle(	)
 	} )
 
-	function playSomeSound(genre) {
-		SC.get('/tracks', {
-			genres: genre,
-			bpm: {
-				from: 100
-			}
+  /* Note, this function could be defined globally, there's no reason to have
+   * it inside this onready calback, really */
 
-		}, function(tracks){
-			var random = Math.floor(Math.random() * 49);
-			var nextTrack = tracks[random]
-			SC.oEmbed(nextTrack.uri, { auto_play: true }, document.getElementById('target'));
-			currentTrack.title = nextTrack.title
-			currentTrack.genre = nextTrack.genre
-			popupHandler(currentTrack.title, currentTrack.genre)
-		});
-	}
+  function playSomeSound(genre) {
+    SC.get('/tracks', {
+      genres: genre,
+      bpm: {
+        from: 100
+      }
+    },
+    function(tracks){
+      /* It seems like there should be a faster / builtin way to get 1 random
+       * track, no?
+       *
+       * Further, this whole playSomeSound thing seems actually to be a class
+       * like...
+       *
+       * new RandomSoundCloudSongChooser("country").song()
+       *
+       *
+       * and that class encapsulates all this logic.  Think about that.
+       */
+      var random = Math.floor(Math.random() * 49);
+      var nextTrack = tracks[random]
+      SC.oEmbed(nextTrack.uri, { auto_play: true }, document.getElementById('target'));
+      currentTrack.title = nextTrack.title
+      currentTrack.genre = nextTrack.genre
+      popupHandler(currentTrack.title, currentTrack.genre)
+    });
+  }
 
 	$(document).click(function(event){
 		console.log($(event.target).text());
 	});
 
+  /* So you have a window.onload event being set in document.ready?  That's
+   * werid because they're basically the same thing.  I'm not sure why you did
+   * this.
+   *
+   */
 	window.onload = function() {
 		SC.initialize({
+      /* WHOA!  This would be really good to have be interpolated from ENV
+       * variables so that you're not hard-coding your client_id
+       *
+       */
 			client_id: '22e9a7ddce77425a1febb432189e7232'
 		});
 

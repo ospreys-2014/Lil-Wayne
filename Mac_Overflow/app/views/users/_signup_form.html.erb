@@ -1,5 +1,6 @@
 <div id="signup-form">
   <%= form_for(user) do |f| %>
+    <%#                                           this should be created as @user in the controller action not by magic behavior in the applicaiton.html.erb file %>
   	<%= render partial: 'shared/error_messages', locals: {user: user } %>
 
     <%= f.label :name %>

@@ -6,6 +6,8 @@
   	<h2 id="popup_title"></h2>
   	<h4 id="popup_genre"></h4>
   	<div>
+      <%# You should use rails built ins to build these things so that you don't have to manually type hard to type things like entry[blah] %>
+      <%# Specifically a form_for a @note and then you can use all the Rails awesome form builder magic.%>
   		<form id="create_note">
   			<input id="entry_user" type="hidden" name="entry[user_id]" value="<%= session[:user_id] %>" />
   			<input id="entry_title" type="hidden" name="entry[title]" value="" />

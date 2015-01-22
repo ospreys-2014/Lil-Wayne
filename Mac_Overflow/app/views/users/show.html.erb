@@ -3,6 +3,7 @@
 
 	<div id='user_posts'>
 		<% @user.entries.each do |post| %>
+    <%# M.A. you don't need to do this enclosing in ""s thing man %>
 		<h1>Title: <%= link_to "#{post.title}", entry_path(post) %></h1>
 		<h1>Genre: <%= post.genre %></h1>
 		<h1>Your Note: <%= post.content %></h1><br>
